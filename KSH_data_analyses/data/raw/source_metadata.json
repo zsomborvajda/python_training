@@ -1,0 +1,38 @@
+{
+  "population": {
+    "source_name": "Központi Statisztikai Hivatal (KSH) – Nagy értékű adatkészletek API",
+    "source_url": "https://data.ksh.hu/datasets/f44d314b-bc27-40a7-b34e-af01b3c4ab05/data/5c5c1828-8599-4b96-8b9f-ef6c27ab7c82.csv",
+    "dataset": "HVD - Népesség (f44d314b-bc27-40a7-b34e-af01b3c4ab05) / Population on 1 January by sex, age and citizenship (5c5c1828-8599-4b96-8b9f-ef6c27ab7c82)",
+    "download_date": "2026-11-15",
+    "reference_period": "január 1-jei állapot, 2013–2024",
+    "unit": "fő (UNIT=NR)",
+    "population_definition": "Magyarország (GEO=HU), mindkét nem (SEX=T), összes állampolgárság (CITIZEN=TOTAL); AGE: TOTAL, Y_LT15 (0–14), Y15-64, Y_GE65 (65+)",
+    "data_status": "official",
+    "local_files": ["data/raw/ksh_population_by_age_citizenship.csv (nyers, API-módban töltődik le)", "data/sample_data/population_sample.csv (kivonat)"],
+    "notes": "Év eleji (január 1.) népesség, nem évközi átlag. A korcsoportok összege megegyezik a teljes népességgel. Ez a disztribúció 2013-tól tartalmaz adatot, ezért a 2000-től induló idősor nem teljesül."
+  },
+  "employment": {
+    "source_name": "KSH STADAT",
+    "source_url": "https://www.ksh.hu/stadat_files/mun/hu/mun0003.csv",
+    "dataset": "STADAT 20.1.1.3. A 15–64 éves népesség gazdasági aktivitása, nemenként – 'Együtt' blokk, 'Foglalkoztatási ráta, %' oszlop",
+    "download_date": "2026-11-15",
+    "reference_period": "éves átlag, 2009–2025",
+    "unit": "%",
+    "population_definition": "15–64 éves népesség, mindkét nem, munkaerő-felmérés (MEF) alapján",
+    "data_status": "official",
+    "local_files": ["data/raw/ksh_stadat_mun0003.csv (nyers, API-módban töltődik le)", "data/sample_data/employment_sample.csv (kivonat)"],
+    "notes": "Nem a data.ksh.hu API része; letölthető STADAT CSV (Windows-1250 kódolás, ';' elválasztó, tizedesvessző). A KSH kész rátáját használjuk, nem számoljuk újra."
+  },
+  "gdp": {
+    "source_name": "Központi Statisztikai Hivatal (KSH) – Nagy értékű adatkészletek API",
+    "source_url": "https://data.ksh.hu/datasets/93a05949-b058-477f-a02d-0fdb024b503f/data/bd19297c-4446-4f1e-85de-577a17389793.xml",
+    "dataset": "HVD - Nemzeti számlák – a GDP főbb éves aggregátumai (93a05949-b058-477f-a02d-0fdb024b503f) / NAMAIN_T01GDP_A (bd19297c-4446-4f1e-85de-577a17389793)",
+    "download_date": "2026-11-15",
+    "reference_period": "naptári év, 1995–2024 (a mintában 2000–2024)",
+    "unit": "millió Ft (UNIT_MEASURE=XDC, UNIT_MULT=6)",
+    "population_definition": "Magyarország (REF_AREA=HU), bruttó hazai termék (STO=B1GQ)",
+    "data_status": "official",
+    "local_files": ["data/raw/ksh_gdp_namain_t01gdp_a.xml (nyers SDMX XML, API-módban töltődik le)", "data/sample_data/gdp_sample.csv (kivonat)"],
+    "notes": "Reál GDP: PRICES=L, láncolt volumen, 2021-es referenciaév (2021-ben egyezik a folyó áras értékkel). A 2024-es érték előzetes (OBS_STATUS=P). Nominális (PRICES=V) adatot nem keverünk vele."
+  }
+}
